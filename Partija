@@ -1,0 +1,349 @@
+package com.example.a7pce.Partija;
+
+import android.os.Vibrator;
+
+import com.example.a7pce.MainActivity2;
+
+import java.util.LinkedList;
+import java.util.List;
+
+public class Partija {
+
+    private Babunlija[] babunlije;
+    private String sef = null;
+    private int broj;
+    private boolean traje = true;
+    private int brojzivih;
+    private int naRedu = 0;
+    private int uFlasi = 0;
+    private int prosuto = 0;
+    private int poslednjiIgrac = 0;
+    private int nubKrug = 0;
+    private int max = 7;
+    private int odigrano = 0;
+    private String tekstZaIspis = "";
+    private boolean imaIzvini;
+    public boolean vibracija = false;
+
+
+
+
+    public String toStringSkor() {
+        int index = 0, maks = -1;
+        odigrano++;
+
+
+        for (int i = 0; i < broj; i++) {
+            if (babunlije[i].getSkor()>maks) {
+                index = i;
+                maks = babunlije[i].getSkor();
+            }
+        }
+        if (odigrano > 4 && maks + maks> odigrano && broj > 2)
+            return maks + ", " + babunlije[index].getIme() + " ŠEF IGRICE \n" + (odigrano-maks) + ", Svi ostali";
+
+        List<Integer> lista = new LinkedList<>();
+        int[] niz = new int[broj];
+        int j = 1;
+        niz[0]=maks;
+        lista.add(index);
+        while (j<broj) {
+            maks = -1;
+            for (int i = 0; i < broj; i++) {
+                if (!lista.contains(i) && babunlije[i].getSkor()>maks) {
+                    index = i;
+                    maks = babunlije[i].getSkor();
+                }
+            }
+            lista.add(index);
+            j++;
+        } //popunjena lista treba ispisati
+
+        String s = "";
+        String fse = "";
+
+        for (int i = 0; i < broj; i++) {
+           if (lista.get(i)==naRedu) fse = "         ŠEF"; /////////////////////////////////////////
+            else fse = "";
+
+            s = s + babunlije[lista.get(i)].toStringSkor() + fse + "\n";
+        }
+        return s;
+    }
+
+
+    public String bezCepaKraj(){
+        for (int i = 0; i < broj; i++){
+            if (babunlije[i].getDoktor()>0){
+                return babunlije[i].toString(1);
+            }
+        }
+        return "Nema doktora";
+    }
+    @Override
+    public String toString() {
+        if (babunlije == null || babunlije.length == 0) throw new RuntimeException("toString za babunlije");
+        String ispis = "";
+        for (int i = 0; i < broj; i++){
+            ispis = ispis + babunlije[i].toString();
+            if (i == naRedu) ispis = ispis + "<<<<<<<";
+            ispis = ispis + "\n";
+            if (broj<=5) ispis = ispis + "\n";
+        }
+        return ispis;
+    }
+
+    public String toString(int x){
+
+            if (babunlije == null || babunlije.length == 0) throw new RuntimeException("toString za babunlije");
+            String ispis = "";
+            for (int i = 0; i < broj; i++){
+                ispis = ispis + babunlije[i].toString(1);
+                if (i == naRedu) ispis = ispis + "<<<<<<<";
+                ispis = ispis + "\n";
+                if (broj<=5) ispis = ispis + "\n";
+            }
+            return ispis;
+        }
+
+
+    public Partija(String igraci, int max, boolean imaIzvini) {
+        String[] babuni = igraci.split("\n");
+        this.broj = babuni.length;
+        this.max = max;
+        this.imaIzvini = imaIzvini;
+        this.brojzivih = this.broj;
+
+        Babunlija[] x = new Babunlija[this.broj];
+        for (int i = 0; i < broj; i++){
+            x[i] = new Babunlija(babuni[i]);
+          //x[i].setIme(babuni[i]);
+            x[i].setIzvini(imaIzvini);
+        }
+        babunlije = x;
+    }
+
+    public void skloniDoktora(){
+        for (int i = 0; i < broj; i++){
+            if (i==naRedu) continue;
+            babunlije[i].skiniDoktora();
+        }
+    }
+
+    public String getTekstZaIspis(){
+        return tekstZaIspis;
+    }
+
+    public int getPoslednjiIgrac() {
+        return poslednjiIgrac;
+    }
+
+    public void setPoslednjiIgrac(int poslednjiIgrac) {
+        this.poslednjiIgrac = poslednjiIgrac;
+    }
+
+    public void setBabunlije(Babunlija[] babunlije) {
+        this.babunlije = babunlije;
+    }
+
+    public void setSef(String sef) {
+        this.sef = sef;
+    }
+
+    public void setBroj(int broj) {
+        this.broj = broj;
+    }
+
+    public void setTraje(boolean traje) {
+        this.traje = traje;
+    }
+
+    public void setBrojzivih(int brojzivih) {
+        this.brojzivih = brojzivih;
+    }
+
+    public void setNaRedu(int naRedu) {
+        this.naRedu = naRedu;
+    }
+
+    public void setuFlasi(int uFlasi) {
+        this.uFlasi = uFlasi;
+    }
+
+    public void setProsuto(int prosuto) {
+        this.prosuto = prosuto;
+    }
+
+    public void setNubKrug(int nubKrug) {
+        this.nubKrug = nubKrug;
+    }
+
+    public void nubKrug(){nubKrug++;}
+
+    public void setMax(int max) {
+        this.max = max;
+    }
+
+    public void setOdigrano(int odigrano) {
+        this.odigrano = odigrano;
+    }
+
+    public Babunlija[] getBabunlije() {
+        return babunlije;
+    }
+
+    public Babunlija getBabunlije(int i){
+        if (i >= babunlije.length) throw new RuntimeException("Ne postoji ova babunlija");
+
+        return babunlije[i];
+    }
+
+    public String getSef() {
+        return sef;
+    }
+
+    public int getBroj() {
+        return broj;
+    }
+
+    public boolean isTraje() {
+        return traje;
+    }
+
+    public int getBrojzivih() {
+        return brojzivih;
+    }
+
+    public int getNaRedu() {
+        return naRedu;
+    }
+
+    public int getuFlasi() {
+        return uFlasi;
+    }
+
+    public int getProsuto() {
+        return prosuto;
+    }
+
+    public int getNubKrug() {
+        return nubKrug;
+    }
+
+    public int getMax() {
+        return max;
+    }
+
+    public int getOdigrano() {
+        return odigrano;
+    }
+
+    public void sledeci(){
+        naRedu++;
+        if (naRedu >= broj) naRedu = 0;
+        if (!babunlije[naRedu].isZiv()) sledeci();
+    }
+    public void ubo(){
+        uFlasi++;
+        babunlije[naRedu].ubo();
+        nubKrug=0;
+        poslednjiIgrac = naRedu;
+        sledeci();
+    }
+
+    public boolean nije(){
+        nubKrug++;
+        babunlije[naRedu].omasio();
+        if (uFlasi == 0){
+            sledeci();
+            prosuto=uFlasi;
+            return false; //bilo 0 u flasi
+        }
+        if (babunlije[naRedu].getPoeni() + uFlasi >= max) {
+
+            if (babunlije[naRedu].isIzvini())  {
+                izvini(naRedu); //ako bi ispao
+                vibracija = true;
+            }
+            else {
+                babunlije[naRedu].setPoeni(babunlije[naRedu].getPoeni()+uFlasi);
+                uFlasi=0;
+                babunlije[naRedu].setZiv(false);
+                brojzivih--;
+                if (brojzivih <2) {
+                    tekstZaIspis=kraj();
+                    //ovde dolazi tekst
+                    prosuto=uFlasi;
+                    return false; //ako je ostao samo 1 lik
+                }
+
+                sledeci();
+            }
+            prosuto=uFlasi;
+            return false; //nista nije uradio
+        }
+
+
+        babunlije[naRedu].setPoeni(babunlije[naRedu].getPoeni()+uFlasi);
+        prosuto = uFlasi;
+        uFlasi=0;
+        poslednjiIgrac = naRedu;
+
+        if (!babunlije[naRedu].isIzvini()) {
+            sledeci();
+            return false;
+        }
+
+        sledeci();
+        return true;
+    }
+
+    public String kraj() {
+        String tekst;
+
+        for (int i = 0; i < broj; i++) {
+
+            if (babunlije[i].isZiv()) {
+                babunlije[i].setSkor(babunlije[i].getSkor() + 1);
+                naRedu = i;
+            }
+
+
+            babunlije[i].setPoeni(0);
+            babunlije[i].setZiv(true);
+            if (imaIzvini) babunlije[i].setIzvini(true);
+
+        }
+        tekst = toStringSkor();
+
+            brojzivih = broj;
+            uFlasi = 0;
+            prosuto = 0;
+            nubKrug = 0;
+
+            traje = false;
+
+
+        return tekst;
+    }
+
+    public void izvini(int i){
+//        babunlije[i].setIzvini(false); dodato u funkciji dole
+        babunlije[i].izvini();
+        nubKrug--;
+    }
+    public void izvini() {
+        babunlije[poslednjiIgrac].setIzvini(false);
+        naRedu = poslednjiIgrac;
+        babunlije[naRedu].setPoeni(babunlije[naRedu].getPoeni()-prosuto);
+        uFlasi = prosuto;
+    }
+
+
+    public void oziviSve() {
+        for (Babunlija z:babunlije
+             ) { z.setZiv(true);
+
+        }
+    }
+}
