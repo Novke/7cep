@@ -1,0 +1,184 @@
+package com.example.a7pce.Partija;
+
+import java.util.LinkedList;
+import java.util.List;
+
+public class Babunlija {
+
+    private boolean izvini = true;
+    private boolean ziv = true;
+    private int poeni = 0;
+    private int skor = 0;
+
+    private String ime = "";
+    private List<Integer> ubo = new LinkedList<>();
+    private int doktor = 0;
+///////////////////////////////////////////////// STATS
+    private int omasenihZaredom = 0;
+    private int maxOmasenihZaredom = 0;
+    private int ubodenihZaredom = 0;
+    private int maxUbodenihZaredom = 0;
+    private int brojUbodenih = 0;
+    private int brojOmasenih = 0;
+    private int brojUbodenihURundi = 0;
+    private int brojOmasenihURundi = 0;
+    private int kolkoPutaIzvini = 0;
+    private int brojUbistava = 0;
+    private double hitRate;
+    private double hitRateURundi;
+    private int brojBacenihFlasa = 0;
+    private String sviPokusaji = "";
+/////////////////////////////////////////////////
+    public static String ispis(String string, int length) {
+        return String.format("%1$"+length+ "s", string);
+    }
+
+
+    public String toString(int x){
+        if (doktor==1) return ime + "   DOKTOR";
+        if (doktor>1) return ime +  "   DOKTOR x" + doktor;
+        return ime;
+    }
+
+    public String toString() {
+        String i = "NEMA";
+        if (izvini) i = "IMA";
+        if (!ziv) i = "U M R O";
+        return  poeni + ispis(ime, 15) + ", " + i;
+    }
+
+    public String toStringSkor(){
+        return skor + ", " + ispis(ime, 15);
+    }
+
+
+    public Babunlija(String ime) {
+        this.ime = ime;
+    }
+    public int getOmasenihZaredom() {
+        return omasenihZaredom;
+    }
+    public void setDoktor(boolean a){doktor++;}
+    public int getDoktor(){
+        return doktor;
+    }
+    public void skiniDoktora(){doktor = 0;}
+    public void setOmasenihZaredom(int omasenihZaredom) {
+        this.omasenihZaredom = omasenihZaredom;
+    }
+
+    public int getUbodenihZaredom() {
+        return ubodenihZaredom;
+    }
+
+    public void setUbodenihZaredom(int ubodenihZaredom) {
+        this.ubodenihZaredom = ubodenihZaredom;
+    }
+
+    public void setUbo(int a){
+        if (a==1 || a==0) ubo.add(a);
+    }
+
+    public void setIzvini(boolean izvini) {
+        this.izvini = izvini;
+    }
+
+    public void setZiv(boolean ziv) {
+        this.ziv = ziv;
+    }
+
+    public void setPoeni(int poeni) {
+        this.poeni = poeni;
+    }
+
+    public void setSkor(int skor) {
+        this.skor = skor;
+    }
+
+    public void setBrojUbodenih(int brojUbodenih) {
+        this.brojUbodenih = brojUbodenih;
+    }
+
+    public void setBrojOmasenih(int brojOmasenih) {
+        this.brojOmasenih = brojOmasenih;
+    }
+
+    public void setBrojUbodenihSve(int brojUbodenihURundi) {
+        this.brojUbodenihURundi = brojUbodenihURundi;
+    }
+
+    public void setBrojOmasenihSve(int brojOmasenihURundi) {
+        this.brojOmasenihURundi = brojOmasenihURundi;
+    }
+
+    public void setIme(String ime) {
+        this.ime = ime;
+    }
+
+    public boolean isIzvini() {
+        return izvini;
+    }
+
+    public boolean isZiv() {
+        return ziv;
+    }
+
+    public int getPoeni() {
+        return poeni;
+    }
+
+    public int getSkor() {
+        return skor;
+    }
+
+    public int getBrojUbodenih() {
+        return brojUbodenih;
+    }
+
+    public int getBrojOmasenih() {
+        return brojOmasenih;
+    }
+
+    public int getBrojUbodenihSve() {
+        return brojUbodenihURundi;
+    }
+
+    public int getBrojOmasenihSve() {
+        return brojOmasenihURundi;
+    }
+
+    public String getIme() {
+        return ime;
+    }
+
+    public void ubo(){
+        omasenihZaredom=0;
+        if (ubodenihZaredom++>maxUbodenihZaredom) maxUbodenihZaredom = ubodenihZaredom;
+        brojBacenihFlasa++;
+        brojUbodenih++;
+        brojUbodenihURundi++;
+        hitRate = brojUbodenih / brojBacenihFlasa;
+        hitRateURundi = brojUbodenihURundi / (brojOmasenihURundi + brojUbodenihURundi);
+        sviPokusaji = sviPokusaji + " +";
+    }
+
+    public void omasio(){
+        ubodenihZaredom =0;
+        brojBacenihFlasa++;
+        if (omasenihZaredom++>maxOmasenihZaredom) maxOmasenihZaredom = omasenihZaredom;
+        brojOmasenih++;
+        brojOmasenihURundi++;
+        hitRate = brojUbodenih / brojBacenihFlasa;
+        hitRateURundi = brojUbodenihURundi / (brojOmasenihURundi + brojUbodenihURundi);
+        sviPokusaji = sviPokusaji + " -";
+    }
+
+    public List<Integer> getUbo() {
+        return ubo;
+    }
+
+    public void izvini(){
+        izvini = false;
+        kolkoPutaIzvini++;
+    }
+}
