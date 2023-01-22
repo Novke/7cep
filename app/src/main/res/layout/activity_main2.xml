@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pozadina"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/p1black"
+    tools:context=".MainActivity2">
+
+
+    <ImageView
+        android:id="@+id/flasa0"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/flasa0"
+        app:layout_constraintBottom_toTopOf="@id/scoreboard"
+        app:layout_constraintRight_toLeftOf="@+id/imageButton" />
+
+    <ImageView
+        android:id="@+id/flasa1"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/flasa1"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/scoreboard"
+        app:layout_constraintRight_toLeftOf="@+id/imageButton" />
+
+    <ImageView
+        android:id="@+id/flasa2"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/flasa2"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/scoreboard"
+        app:layout_constraintRight_toLeftOf="@+id/imageButton" />
+
+    <ImageView
+        android:id="@+id/flasa3"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/flasa3"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/scoreboard"
+        app:layout_constraintRight_toLeftOf="@+id/imageButton" />
+
+    <ImageView
+        android:id="@+id/flasa4"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/flasa4"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/scoreboard"
+        app:layout_constraintRight_toLeftOf="@+id/imageButton" />
+
+    <ImageView
+        android:id="@+id/flasa5"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/flasa5"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/scoreboard"
+        app:layout_constraintRight_toLeftOf="@+id/imageButton" />
+
+    <ImageView
+        android:id="@+id/flasa6"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/flasa6"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/scoreboard"
+        app:layout_constraintRight_toLeftOf="@+id/imageButton" />
+
+    <ImageView
+        android:id="@+id/flasaOrange"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/orange7"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/scoreboard"
+        app:layout_constraintRight_toLeftOf="@+id/imageButton" />
+
+    <ImageView
+        android:id="@+id/flasaZlatna"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/gold7"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/scoreboard"
+        app:layout_constraintRight_toLeftOf="@+id/imageButton" />
+
+    <ImageView
+        android:id="@+id/flasaZlatna1"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/gold1"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/scoreboard"
+        app:layout_constraintRight_toLeftOf="@+id/imageButton" />
+
+    <ImageView
+        android:id="@+id/flasaZlatna2"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/gold2"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/scoreboard"
+        app:layout_constraintRight_toLeftOf="@+id/imageButton" />
+
+    <ImageView
+        android:id="@+id/flasaZlatna3"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/gold3"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/scoreboard"
+        app:layout_constraintRight_toLeftOf="@+id/imageButton" />
+
+    <ImageView
+        android:id="@+id/flasaZlatna4"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/gold4"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/scoreboard"
+        app:layout_constraintRight_toLeftOf="@+id/imageButton" />
+
+    <ImageView
+        android:id="@+id/flasaZlatna5"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/gold5"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/scoreboard"
+        app:layout_constraintRight_toLeftOf="@+id/imageButton" />
+
+
+    <ImageView
+        android:id="@+id/flasaZlatna6"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/gold6"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/scoreboard"
+        app:layout_constraintRight_toLeftOf="@+id/imageButton" />
+
+    <ImageView
+        android:id="@+id/flasaOrange1"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/orange1"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/scoreboard"
+        app:layout_constraintRight_toLeftOf="@+id/imageButton" />
+
+    <ImageView
+        android:id="@+id/flasaOrange2"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/orange2"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/scoreboard"
+        app:layout_constraintRight_toLeftOf="@+id/imageButton" />
+
+    <ImageView
+        android:id="@+id/flasaOrange3"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/orange3"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/scoreboard"
+        app:layout_constraintRight_toLeftOf="@+id/imageButton" />
+
+    <ImageView
+        android:id="@+id/flasaOrange4"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/orange4"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/scoreboard"
+        app:layout_constraintRight_toLeftOf="@+id/imageButton" />
+
+    <ImageView
+        android:id="@+id/flasaOrange5"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/orange5"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/scoreboard"
+        app:layout_constraintRight_toLeftOf="@+id/imageButton" />
+
+    <ImageView
+        android:id="@+id/flasaOrange6"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/orange6"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/scoreboard"
+        app:layout_constraintRight_toLeftOf="@+id/imageButton" />
+
+
+
+    <TextView
+        android:id="@+id/textMod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="MOD:"
+        android:textAlignment="viewStart"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textBaca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="BACA: "
+        android:textAlignment="viewStart"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textMod" />
+
+    <TextView
+        android:id="@+id/textUflasi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="U FLASI:"
+        android:textAlignment="viewStart"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textBaca" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="69dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/p1black"
+        android:foregroundTint="@color/p1svetla"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/btn_dialog"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/scoreboard"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/p1tamna"
+        android:clickable="false"
+        android:editable="false"
+        android:ems="10"
+        android:textAlignment="viewStart"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/buttonIzvini"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textUflasi"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+
+    <Button
+        android:id="@+id/buttonUbo"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:background="@drawable/orangebtn"
+        android:text="UBO"
+        android:textColor="@color/p1black"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonNije"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <Button
+        android:id="@+id/buttonNije"
+        android:layout_width="185dp"
+        android:layout_height="70dp"
+        android:background="@drawable/orangebtn"
+        android:text="NIJE"
+        android:textColor="@color/p1black"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/buttonUbo"
+        app:layout_constraintTop_toTopOf="@+id/buttonUbo"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/buttonDalje"
+        android:layout_width="195dp"
+        android:layout_height="70dp"
+        android:backgroundTint="@color/p1svetla"
+        android:text="DALJE"
+        android:textColor="#FFFFFF"
+        android:visibility="invisible"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:strokeColor="@color/p1orange"
+        app:strokeWidth="2dp" />
+
+    <Button
+        android:id="@+id/buttonIzvini"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="110dp"
+        android:layout_height="59dp"
+        android:background="@drawable/orangebtn"
+        android:text="Izvini"
+        android:textColor="@color/p1black"
+        android:visibility="invisible"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toTopOf="@+id/buttonUbo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonStatistika"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/orangebtn"
+        android:text="Stats"
+        android:textColor="@color/p1black"
+        android:visibility="invisible"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toTopOf="@+id/scoreboard"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/buttonUndo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/p1black"
+        app:srcCompat="@android:drawable/ic_menu_revert"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/buttonNije" />
+
+    <ImageButton
+        android:id="@+id/buttonIzbaci"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:backgroundTint="@color/p1black"
+        android:foregroundTint="@color/p1svetla"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/scoreboard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/flasa0"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton"
+        app:srcCompat="@android:drawable/ic_menu_edit" />
+
+    <ImageButton
+        android:id="@+id/buttonPomoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/p1black"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/scoreboard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/flasa0"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton"
+        app:srcCompat="@android:drawable/ic_menu_myplaces" />
+</androidx.constraintlayout.widget.ConstraintLayout>

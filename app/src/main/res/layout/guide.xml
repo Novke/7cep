@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/p1black">
+
+    <TextView
+        android:id="@+id/naslov1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sta je 7cep?"
+        android:textColor="@color/p1orange"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/guidetekst1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="7cep je bottle-flip igra u kojoj je igracima cilj da bace flasu na pod a da se ona doceka uspravno. Igra se igra uzivo, ne na telefonu, aplikacija samo sluzi za pracenje rezultata, statistike i vizualizaciju"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/naslov1" />
+
+    <TextView
+        android:id="@+id/naslov2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pravila"
+        android:textColor="@color/p1orange"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guidetekst1" />
+
+    <TextView
+        android:id="@+id/guidetekst2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text='Igraci staju u krug i "bacaju" redom flasu. Ako igrac pogodi, broj poena u flasi raste za 1. Ako igrac omasi, dodaju mu se svi poeni iz flase. Svaki igrac ima pravo da se jednom po partiji izvini nakon omasenog bacanja i da baci opet. Igrac koji skupi 7 ili vise poena ispada. Igrac koji poslednji ostane u igri je pobednik'
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/naslov2" />
+
+    <TextView
+        android:id="@+id/naslov3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Unos igraca"
+        android:textColor="@color/p1orange"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guidetekst2" />
+
+    <TextView
+        android:id="@+id/guidetekst3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text='Na pocetnom ekranu igraci se dodaju unosom imena igraca u polje i klikom na dugme "Dodaj". Igraci se mogu uneti jedan po jedan, ili je moguce uneti vise igraca odjednom, tako da se izmedju svaka dva imena nalazi razmak. Kad se unesu svi igraci igra se pokrece na dugme "Start"'
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/naslov3" />
+
+    <TextView
+        android:id="@+id/naslov4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Partija"
+        android:textColor="@color/p1orange"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guidetekst3" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text='Na ekranu je u svakom trenutku ispisan sledeci igrac koji treba da baci flasu, kao i broj poena koji je u flasi. Ako igrac pogodi, treba stisnuti dugme "UBO", a u suprotnom "NIJE". Aplikacija ce sama dodeljivati poene i izbacivati igrace. Igrac se moze izvinuti manuelno, stiskom na dugme "IZVINI" NAKON omasenog poteza (kad je na redu sledeci igrac) ili automatski, kada bi ispao u suprotnom, i tada ce aplikacija automatski da aktivira izvini. Svaki igrac koji ima dostupno izvini ce imati naznaceno u okviru imena. Ako se napravi ceo krug takav da su svi igraci omasili, to se zove "Nub krug".'
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/naslov4" />
+
+    <TextView
+        android:id="@+id/naslov5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Modovi"
+        android:textColor="@color/p1orange"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <TextView
+        android:id="@+id/guidetekst5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Klasika - standardan mod do 7 uz izvini.\nDo 1 bez izvini - Igra se do 1 i igraci nemaju izvini\nDo 1 izvini - Igra se do 1, igraci imaju izvini\nBez cepa - Odlucujuca igra, skida se cep sa flase i pobednik je onaj koji pogodi flasu poslednji, pre nego sto sva voda iscuri\nZLATNA - Odlucujuca igra, ko pobedi kraj"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/naslov5" />
+
+    <TextView
+        android:id="@+id/naslov6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Statistika"
+        android:textColor="@color/p1orange"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guidetekst5" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/naslov6" />
+</androidx.constraintlayout.widget.ConstraintLayout>

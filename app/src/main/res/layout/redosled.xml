@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/p1black"
+    android:backgroundTint="@color/p1black">
+
+    <TextView
+        android:id="@+id/izvininaslov"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="npr: 41352 -> Prvo igra 4, pa 1, itd."
+        android:textAlignment="textStart"
+        android:textColor="#FFFFFF"
+        android:textSize="10dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/izvinitekst" />
+
+    <EditText
+        android:id="@+id/izvinitekst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:editable="false"
+        android:text="Igrac: 1\nIgrac: 2\nIgrac: 3\nIgrac: 4"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/izviniUNOS"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:background="@color/p1svetla"
+        android:ems="10"
+        android:hint="Unesi broj:"
+        android:inputType="number"
+        android:textAlignment="textStart"
+        android:textColor="#FFFFFF"
+        android:textStyle="italic"
+        app:layout_constraintRight_toLeftOf="@+id/izviniOK"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/izvininaslov" />
+
+    <Button
+        android:id="@+id/izviniOK"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/p1svetla"
+        android:text="OK"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/izvininaslov"
+        app:strokeColor="@color/p1orange"
+        app:strokeWidth="3dp" />
+
+    <Button
+        android:id="@+id/redosledAjde"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/p1orange"
+        android:enabled="false"
+        android:text="Ajde"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.73"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/izviniOK" />
+
+    <Button
+        android:id="@+id/redosledAbort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/p1orange"
+        android:text="Abort"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/redosledAjde"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/izviniOK" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

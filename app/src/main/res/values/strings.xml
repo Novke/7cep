@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">7ČEP</string>
+
+    <string-array name="Modovi">
+        <item>klasika</item>
+        <item>do 1 bez izvini</item>
+        <item>do 1 izvini</item>
+        <item>bez cepa</item>
+        <item>ZLATNA</item>
+    </string-array>
+
+</resources>

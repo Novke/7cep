@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/novke/AndroidStudioProjects/7pce/app/src/main/res/drawable/dialogbackground.xml" value="0.3314814814814815" />
+        <entry key="..\:/Users/novke/AndroidStudioProjects/7pce/app/src/main/res/drawable/goldenbtn.xml" value="0.3828125" />
+        <entry key="..\:/Users/novke/AndroidStudioProjects/7pce/app/src/main/res/drawable/orangebtn.xml" value="0.3828125" />
+        <entry key="..\:/Users/novke/AndroidStudioProjects/7pce/app/src/main/res/drawable/statistikanaslob.xml" value="0.3828125" />
+        <entry key="..\:/Users/novke/AndroidStudioProjects/7pce/app/src/main/res/drawable/tool.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/novke/AndroidStudioProjects/7pce/app/src/main/res/layout/activity_main.xml" value="0.2957427536231884" />
+        <entry key="..\:/Users/novke/AndroidStudioProjects/7pce/app/src/main/res/layout/activity_main2.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/novke/AndroidStudioProjects/7pce/app/src/main/res/layout/dropdownitem.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/novke/AndroidStudioProjects/7pce/app/src/main/res/layout/editigrace.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/novke/AndroidStudioProjects/7pce/app/src/main/res/layout/esisig.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/novke/AndroidStudioProjects/7pce/app/src/main/res/layout/finaledialog.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/novke/AndroidStudioProjects/7pce/app/src/main/res/layout/guide.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/novke/AndroidStudioProjects/7pce/app/src/main/res/layout/izbacivanje.xml" value="0.5" />
+        <entry key="..\:/Users/novke/AndroidStudioProjects/7pce/app/src/main/res/layout/redosled.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/novke/AndroidStudioProjects/7pce/app/src/main/res/layout/stats.xml" value="0.36666666666666664" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
